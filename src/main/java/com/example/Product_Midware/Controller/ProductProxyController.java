@@ -28,4 +28,9 @@ public class ProductProxyController {
         return ResponseEntity.ok(service.fetch(name));
     }
 
+    // ✅ Health Check Endpoint
+    @GetMapping("/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("JPA is running");
+    }
 }
